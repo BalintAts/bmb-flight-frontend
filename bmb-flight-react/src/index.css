@@ -16,8 +16,23 @@ code {
   margin-bottom: 30px;
 }
 
-.search-form {
+.form-row {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.div-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ticket-results {
+  margin: 0 10% 0 10%;
 }

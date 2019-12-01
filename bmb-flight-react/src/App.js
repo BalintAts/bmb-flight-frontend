@@ -12,7 +12,10 @@ class App extends Component {
         <NavBar />
         <main className="content">
           <Switch>
-            <Route path="/flights/:from/:to" component={FlightsByDirection} />
+            <Route
+              path="/flights/:origin/:destination"
+              component={FlightsByDirection}
+            />
             <Route path="/not-found" component={NotFound} />
             <Route path="/" exact component={MainPage} />
             <Redirect to="/not-found" />
