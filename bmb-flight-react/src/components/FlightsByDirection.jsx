@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NumberFormat from "react-number-format";
 import axiosService from "../services/axiosService";
+import queryString from "query-string";
 
 const apiEndpoint = "http://localhost:54192/api/filter";
 
@@ -13,15 +14,15 @@ class FlightsByDirection extends Component {
   async componentDidMount() {
     this.setState({ isLoading: true });
 
+    const qString = queryString.parse(this.props.location.search);
     const postData = {
       ...this.props.match.params,
-      departDate: "",
-      returnDate: ""
+      ...qString
     };
 
-    const flightData = await axiosService.post(apiEndpoint, postData);
+    const response = await axiosService.post(apiEndpoint, postData);
 
-    this.setState({ flightData: flightData.data });
+    this.setState({ flightData: response.data });
     this.setState({ isLoading: false });
   }
 
