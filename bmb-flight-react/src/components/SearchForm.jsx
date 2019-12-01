@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class SearchForm extends Component {
   state = {
@@ -18,16 +19,13 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <form
-          style={{ marginRight: 50, marginLeft: 50, marginBottom: 50 }}
-          onSubmit={e => this.props.handleSubmit(this.state.postData, e)}
-        >
+      <div className="search-form">
+        <form onSubmit={e => this.props.handleSubmit(this.state.postData, e)}>
           <div className="form-row align-items-center">
             <div className="col-auto">
               <label>Direction</label>
               <input
-                id="fromInput"
+                id="origin"
                 name="origin"
                 value={this.state.postData.direction}
                 onChange={this.handleChange}
@@ -38,7 +36,7 @@ class SearchForm extends Component {
             <div className="col-auto">
               <label>Destination</label>
               <input
-                id="toInput"
+                id="destination"
                 name="destination"
                 value={this.state.postData.toDirection}
                 onChange={this.handleChange}
@@ -49,7 +47,7 @@ class SearchForm extends Component {
             <div className="col-auto">
               <label>Date</label>
               <input
-                id="whenInput"
+                id="departDate"
                 name="departDate"
                 value={this.state.postData.whenDate}
                 onChange={this.handleChange}
@@ -60,7 +58,7 @@ class SearchForm extends Component {
             <div className="col-auto">
               <label>Return date</label>
               <input
-                id="returnInput"
+                id="returnDate"
                 name="returnDate"
                 value={this.state.postData.returnDate}
                 onChange={this.handleChange}
@@ -69,11 +67,11 @@ class SearchForm extends Component {
               ></input>
             </div>
             <div style={{ width: 216.3, height: 6 }}>
-              <button className="btn btn-primary mb-2">Search</button>
+              <button className="btn btn-primary mb-2">Save</button>
             </div>
           </div>
         </form>
-      </React.Fragment>
+      </div>
     );
   }
 }

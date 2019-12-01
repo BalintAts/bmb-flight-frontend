@@ -10,6 +10,10 @@ class MainPage extends Component {
     data: []
   };
 
+  /*componentDidMount() {
+    all cities needed for inputs (api request)
+  }*/
+
   handleSubmit = async (postData, e) => {
     e.preventDefault();
     const data = await axiosService.post(apiEndpoint, postData);
@@ -17,20 +21,13 @@ class MainPage extends Component {
   };
 
   render() {
+    const { data, isLoading } = this.state;
     return (
       <React.Fragment>
         <h1 style={{ textAlign: "center" }}>Where do you want to fly?</h1>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
-          <SearchForm handleSubmit={this.handleSubmit} />
-        </div>
+        <SearchForm handleSubmit={this.handleSubmit} />
         <React.Fragment>
-          <FlightsByDirection data={this.state.data} />
+          <FlightsByDirection data={data} isLoading={isLoading} />
         </React.Fragment>
       </React.Fragment>
     );
