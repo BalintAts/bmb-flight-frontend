@@ -31,7 +31,7 @@ class SearchForm extends Component {
     return (
       <div className="form-row align-items-center">
         <div className="col-auto">
-          <label>Direction</label>
+          <label htmlFor="origin">Direction</label>
           <input
             id="origin"
             name="origin"
@@ -42,7 +42,7 @@ class SearchForm extends Component {
           ></input>
         </div>
         <div className="col-auto">
-          <label>Destination</label>
+          <label htmlFor="destination">Destination</label>
           <input
             id="destination"
             name="destination"
@@ -53,24 +53,24 @@ class SearchForm extends Component {
           ></input>
         </div>
         <div className="col-auto">
-          <label>Date</label>
+          <label htmlFor="departDate">Date</label>
           <input
             id="departDate"
             name="departDate"
             value={departDate}
             onChange={this.handleChange}
-            type="text"
+            type="date"
             className="form-control"
           ></input>
         </div>
         <div className="col-auto">
-          <label>Return date</label>
+          <label htmlFor="returnDate">Return date</label>
           <input
             id="returnDate"
             name="returnDate"
             value={returnDate}
             onChange={this.handleChange}
-            type="text"
+            type="date"
             className="form-control"
           ></input>
         </div>

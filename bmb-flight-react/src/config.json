@@ -1,0 +1,4 @@
+{
+  "apiEndpointFilter": "http://localhost:54192/api/filter",
+  "apiEndpointRegister": "http://localhost:54192/user"
+}
