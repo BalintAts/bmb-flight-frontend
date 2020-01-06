@@ -81,7 +81,10 @@ class SearchForm extends Component {
             className="form-control"
           ></input>
         </div>
-        <div style={{ width: 216.3, height: 6 }}>
+            <div 
+                style={{ width: 216.3, height: 6 }}
+            >
+                
           <button
             className="btn btn-primary mb-2"
             onClick={this.handleClick}

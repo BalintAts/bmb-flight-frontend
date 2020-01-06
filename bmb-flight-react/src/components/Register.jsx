@@ -4,6 +4,7 @@ import Input from "./common/input";
 import axiosService from "../services/axiosService";
 import config from "../config.json";
 import Joi from "joi-browser";
+import "./Register.css";
 
 class Register extends Form {
   state = {
