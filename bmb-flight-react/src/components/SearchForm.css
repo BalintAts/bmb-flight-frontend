@@ -1,0 +1,10 @@
+body, html {
+    /* The image used */
+    background-image: url(http://www.xinhuanet.com/english/2019-09/25/138422039_15694131265961n.jpg);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

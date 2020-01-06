@@ -1,6 +1,6 @@
 {
-  "apiEndpointFilter": "http://localhost:54192/api/filter",
-  "apiEndpointRegister": "http://localhost:54192/user/registration",
-  "apiEndpointLogin": "http://localhost:54192/user/login",
-  "apiEndpointAddFlight": "http://localhost:54192/add-flight/"
+  "apiEndpointFilter": "http://localhost:40000/api/filter",
+  "apiEndpointRegister": "http://localhost:40000/user/registration",
+  "apiEndpointLogin": "http://localhost:40000/user/login",
+  "apiEndpointAddFlight": "http://localhost:40000/add-flight/"
 }

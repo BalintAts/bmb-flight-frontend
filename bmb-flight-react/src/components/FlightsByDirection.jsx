@@ -5,6 +5,7 @@ import queryString from "query-string";
 import config from "../config.json";
 import jwtDecode from "jwt-decode";
 import { toast } from "react-toastify";
+import "./FlightsByDirection.css";
 
 class FlightsByDirection extends Component {
   state = {
