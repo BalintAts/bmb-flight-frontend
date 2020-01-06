@@ -25,6 +25,12 @@ class SearchForm extends Component {
     );
   };
 
+  checkDirectionsAreEmpty = () => {
+    const { origin, destination } = this.state.postData;
+    if (origin === "" || destination === "") return true;
+    return false;
+  };
+
   render() {
     const { origin, destination, departDate, returnDate } = this.state.postData;
 
@@ -75,7 +81,11 @@ class SearchForm extends Component {
           ></input>
         </div>
         <div style={{ width: 216.3, height: 6 }}>
-          <button className="btn btn-primary mb-2" onClick={this.handleClick}>
+          <button
+            className="btn btn-primary mb-2"
+            onClick={this.handleClick}
+            disabled={this.checkDirectionsAreEmpty()}
+          >
             Search
           </button>
         </div>

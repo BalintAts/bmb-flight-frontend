@@ -33,6 +33,13 @@ code {
   margin-bottom: 20px;
 }
 
+.register-form {
+  justify-content: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 .ticket-results {
   margin: 0 10% 0 10%;
 }

@@ -14,8 +14,8 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div className="result-header">
-        <h1>Where do you want to fly?</h1>
+      <div>
+        <h1 className="result-header">Where do you want to fly?</h1>
         <SearchForm parentProps={this.props} />
       </div>
     );

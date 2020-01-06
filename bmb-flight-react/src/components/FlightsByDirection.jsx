@@ -3,6 +3,8 @@ import NumberFormat from "react-number-format";
 import axiosService from "../services/axiosService";
 import queryString from "query-string";
 import config from "../config.json";
+import jwtDecode from "jwt-decode";
+import { toast } from "react-toastify";
 
 class FlightsByDirection extends Component {
   state = {
@@ -26,6 +28,16 @@ class FlightsByDirection extends Component {
 
     this.setState({ flightData: response.data, isLoading: false });
   }
+
+  handleAdd = flightData => {
+    const jwt = localStorage.getItem("token");
+    try {
+      const user = jwtDecode(jwt);
+      const postUrl = config.apiEndpointAddFlight + user.userName;
+      toast.info("Ticket added to whislist", { autoClose: 4000 });
+      console.log(postUrl);
+    } catch (ex) {}
+  };
 
   render() {
     const { flightData, isLoading } = this.state;
@@ -63,7 +75,12 @@ class FlightsByDirection extends Component {
                 <th>When</th>
                 <th>Return Date</th>
                 <th>Price (HUF)</th>
-                <th></th>
+                {localStorage.token && (
+                  <React.Fragment>
+                    <th></th>
+                    <th></th>
+                  </React.Fragment>
+                )}
               </tr>
             </thead>
             <tbody>
@@ -81,9 +98,21 @@ class FlightsByDirection extends Component {
                       prefix={"Ft "}
                     />
                   </td>
-                  <td>
-                    <button className="btn btn-primary btn-sm">Buy</button>
-                  </td>
+                  {localStorage.token && (
+                    <React.Fragment>
+                      <td>
+                        <button className="btn btn-primary btn-sm">Buy</button>
+                      </td>
+                      <td>
+                        <button
+                          className="btn btn-primary btn-sm"
+                          onClick={() => this.handleAdd(data)}
+                        >
+                          Add to cart
+                        </button>
+                      </td>
+                    </React.Fragment>
+                  )}
                 </tr>
               ))}
             </tbody>
