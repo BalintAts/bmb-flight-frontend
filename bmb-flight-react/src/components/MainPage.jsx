@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import SearchForm from "./SearchForm";
-import regModal from "./RegisterModal";
 import NumberFormat from "react-number-format";
-import { toast } from "react-toastify";
 import "./MainPage.css"
 import axiosService from "../services/axiosService";
 import config from "../config.json";
