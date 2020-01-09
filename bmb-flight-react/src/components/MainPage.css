@@ -1,14 +1,15 @@
-.table {
-    /*background-color: blue;*/
+/*table {
+    background-color: blue;
     background-color: rgba(50,50,50,0.5);
     padding: 200px;
-    margin: 50px 50px 50px 50px;
-    /*border-radius: 10px;*/
+    margin: 50px 50px 50px 50px auto;
+    border-radius: 10px;
     color: white;
-}
+}*/
 
 h1 {
     color: rgb(220, 220, 220);
+    border: 3px;
 }
 body {
     background-color: white;
@@ -23,6 +24,7 @@ tr {
 }
 
 .most-popular-results {
-    width: 216.3;
-    height: 6;
+ padding:  0px 200px 0px 200px;
+ padding:  0px 20% 0px 20%;
+    margin: 50px 50px 50px 50px auto;
 }
