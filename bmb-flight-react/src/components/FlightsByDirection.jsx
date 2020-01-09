@@ -93,7 +93,7 @@ class FlightsByDirection extends Component {
                   <td>{data.returnDate}</td>
                   <td>
                     <NumberFormat
-                      value={data.value}
+                      value={data.price}
                       displayType="text"
                       thousandSeparator={true}
                       prefix={"Ft "}

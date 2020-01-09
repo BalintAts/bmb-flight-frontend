@@ -1,3 +1,28 @@
-table{
-    background-color: black;
+.table {
+    /*background-color: blue;*/
+    background-color: rgba(50,50,50,0.5);
+    padding: 200px;
+    margin: 50px 50px 50px 50px;
+    /*border-radius: 10px;*/
+    color: white;
+}
+
+h1 {
+    color: rgb(220, 220, 220);
+}
+body {
+    background-color: white;
+}
+
+th {
+    color: rgb(220, 220, 220);
+}
+
+tr {
+    color: rgb(220, 220, 220);
+}
+
+.most-popular-results {
+    width: 216.3;
+    height: 6;
 }
