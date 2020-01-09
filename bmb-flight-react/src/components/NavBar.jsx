@@ -1,11 +1,20 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import "./RegisterModal";
 
 const NavBar = ({ user }) => {
-  return (
+    return (
+        
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link className="navbar-brand" to="/">
-        BmB flight
+        <Link className="navbar-brand" to="/">
+        BmB flight        
+        </Link>
+        <Link className="navbar-brand" to="/">
+            <img    src="/output-onlinepngtools.png"
+                    width={70}
+                    height={50}
+                    alt="flightLoader">
+            </img>                        
       </Link>
       <button
         className="navbar-toggler"
@@ -23,9 +32,14 @@ const NavBar = ({ user }) => {
           {!user && (
             <React.Fragment>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/register">
+                              
+                               <NavLink className="nav-link" to="/register">
                   Register
                 </NavLink>
+
+
+
+
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/login">

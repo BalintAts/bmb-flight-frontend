@@ -1,4 +1,4 @@
-body, html {
+html, body{
     background-image: url(http://www.xinhuanet.com/english/2019-09/25/138422039_15694131265961n.jpg);
     height: 100%;
     background-position: center;
@@ -17,4 +17,9 @@ div.form-row {
 
 .btn {
     vertical-align:bottom;
+}
+
+.result-header{
+    color: white;
+    /*font-family:;*/
 }

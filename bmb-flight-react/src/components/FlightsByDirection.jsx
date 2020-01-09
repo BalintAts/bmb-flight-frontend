@@ -50,7 +50,7 @@ class FlightsByDirection extends Component {
             <h3>Loading...</h3>
             <br />
             <img
-              src="/plane_loading.gif"
+                      src="/ezgif-1-454e00dff622.gif"
               width={100}
               height={100}
               alt="flightLoader"

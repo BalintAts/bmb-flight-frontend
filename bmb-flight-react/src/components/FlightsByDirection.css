@@ -7,6 +7,10 @@
 	color: white;
 }
 
+body{
+    background-color: white;
+}
+
 th{
 	color: rgb(220, 220, 220);
 }
@@ -14,4 +18,8 @@ th{
 tr {
 	color: rgb(220, 220, 220);
 
+}
+
+btn {
+    color: rgb(220, 220, 220);
 }
